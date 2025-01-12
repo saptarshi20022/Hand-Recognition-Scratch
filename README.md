@@ -3,6 +3,17 @@
 
 Hand-Recognition-Scratch is a Python-based project utilizing MediaPipe, TensorFlow, and OpenCV for real-time hand gesture recognition. The project covers the entire workflow, from data collection and preprocessing to model training and real-time prediction.
 
+## Requirements
+- **Language Used**:
+   - Python 3.11.9
+
+- **Libraries Used**:
+   - Tensorflow 2.18.0
+   - Mediapipe 0.10.20
+   - Opencv-python 4.10.0.84
+   - Keras 3.7.0
+   - Scikit-learn 1.6.0
+
 ## Features
 - **Webcam Testing**: Validate webcam functionality.
 - **Module Testing**: Verify MediaPipe module for hand detection.
