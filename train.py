@@ -1,8 +1,10 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
+# import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.utils import class_weight
+from sklearn.metrics import classification_report
 
 # Load preprocessed data
 X = np.load("X.npy")
@@ -57,3 +59,56 @@ history = model.fit(
 # Save the trained model
 model.save("gesture_recognition_model.keras")
 print("Model trained and saved successfully.")
+
+# # Training and validation metrics
+# train_acc = history.history['accuracy']
+# val_acc = history.history['val_accuracy']
+# train_loss = history.history['loss']
+# val_loss = history.history['val_loss']
+
+# # Calculate final metrics
+# final_train_acc = train_acc[-1]  # Last epoch training accuracy
+# final_val_acc = val_acc[-1]      # Last epoch validation accuracy
+# final_train_loss = train_loss[-1]
+# final_val_loss = val_loss[-1]
+
+# # Print metrics
+# print(f"Final Training Accuracy: {final_train_acc:.2f}")
+# print(f"Final Validation Accuracy: {final_val_acc:.2f}")
+# print(f"Final Training Loss: {final_train_loss:.2f}")
+# print(f"Final Validation Loss: {final_val_loss:.2f}")
+
+# # Plot metrics for visualization
+# epochs = range(1, len(train_acc) + 1)
+
+# # Accuracy plot
+# plt.figure(figsize=(12, 5))
+# plt.subplot(1, 2, 1)
+# plt.plot(epochs, train_acc, label='Training Accuracy')
+# plt.plot(epochs, val_acc, label='Validation Accuracy')
+# plt.title('Accuracy Over Epochs')
+# plt.xlabel('Epochs')
+# plt.ylabel('Accuracy')
+# plt.legend()
+
+# # Loss plot
+# plt.subplot(1, 2, 2)
+# plt.plot(epochs, train_loss, label='Training Loss')
+# plt.plot(epochs, val_loss, label='Validation Loss')
+# plt.title('Loss Over Epochs')
+# plt.xlabel('Epochs')
+# plt.ylabel('Loss')
+# plt.legend()
+
+# plt.tight_layout()
+# plt.show()
+
+
+
+
+# Predictions on the validation set
+y_val_pred = np.argmax(model.predict(X_val), axis=1)
+
+# Generate classification report
+gesture_labels = {0: "thumbs_up", 1: "palm_open", 2: "swipe_right", 3: "no_gesture"}  # Define labels
+print(classification_report(y_val, y_val_pred, target_names=list(gesture_labels.values())))
