@@ -106,9 +106,9 @@ print("Model trained and saved successfully.")
 
 
 
-# Predictions on the validation set
-y_val_pred = np.argmax(model.predict(X_val), axis=1)
+# # Predictions on the validation set
+# y_val_pred = np.argmax(model.predict(X_val), axis=1)
 
-# Generate classification report
-gesture_labels = {0: "thumbs_up", 1: "palm_open", 2: "swipe_right", 3: "no_gesture"}  # Define labels
-print(classification_report(y_val, y_val_pred, target_names=list(gesture_labels.values())))
+# # Generate classification report
+# gesture_labels = {0: "thumbs_up", 1: "palm_open", 2: "swipe_right", 3: "no_gesture"}  # Define labels
+# print(classification_report(y_val, y_val_pred, target_names=list(gesture_labels.values())))
