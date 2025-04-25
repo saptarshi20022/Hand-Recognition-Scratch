@@ -11,8 +11,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.hand_tracker import HandDetector
 
 # Constants
-wCam, hCam = 640, 480
-confidence_threshold = 0.8
+wCam, hCam = 440, 280
+confidence_threshold = 0.6
 
 # Initialize webcam
 cap = cv2.VideoCapture(0)
@@ -29,7 +29,7 @@ gesture_labels = {
 }
 
 # Initialize hand detector
-detector = HandDetector(max_num_hands=1, min_detection_confidence=0.7)
+detector = HandDetector(max_num_hands=1, min_detection_confidence=0.6)
 
 # Control parameters
 pTime = 0
@@ -47,6 +47,7 @@ while True:
     lmList = detector.find_position(img, include_z=True)
 
     current_gesture = "no_gesture"
+
     
     if bboxes and lmList:
         # Get first hand's bounding box
