@@ -87,7 +87,7 @@ if __name__ == "__main__":
         img, bboxes = detector.find_hands(img)
         
         if bboxes:
-            # Draw first hand's bounding box
+            # Drawing first hand's bounding box
             x_min, y_min, x_max, y_max = bboxes[0]
             cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
         
