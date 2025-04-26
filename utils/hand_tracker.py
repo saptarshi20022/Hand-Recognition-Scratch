@@ -39,7 +39,7 @@ class HandDetector:
                     self.mp_draw.draw_landmarks(
                         img, hand_landmarks, self.mp_hands.HAND_CONNECTIONS)
                 
-                # Calculating bounding box with margin (from Project 1)
+                # Calculating bounding box with margin (from Hand-Recognition-Scratch)
                 h, w, _ = img.shape
                 x_coords = [lm.x * w for lm in hand_landmarks.landmark]
                 y_coords = [lm.y * h for lm in hand_landmarks.landmark]
