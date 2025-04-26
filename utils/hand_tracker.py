@@ -77,7 +77,7 @@ class HandDetector:
         
         return lm_list
 
-# Example usage (keep for testing)
+# Example usage (kept for testing)
 if __name__ == "__main__":
     cap = cv2.VideoCapture(0)
     detector = HandDetector(max_num_hands=1)
