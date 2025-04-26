@@ -2,7 +2,6 @@ import cv2
 import time
 import sys
 import os
-# import math
 import numpy as np
 import tensorflow as tf
 import pyautogui
