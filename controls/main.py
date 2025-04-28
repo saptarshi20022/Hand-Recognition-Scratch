@@ -67,7 +67,7 @@ while True:
         # Cursor Control Logic
         x1, y1 = lmList[8][1], lmList[8][2]  # Index finger tip
         
-        # Convert coordinates to screen size
+        # Converts coordinates to screen size
         x3 = np.interp(x1, (0, wCam), (0, screen_w))
         y3 = np.interp(y1, (0, hCam), (0, screen_h))
         
