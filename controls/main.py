@@ -71,7 +71,7 @@ while True:
         x3 = np.interp(x1, (0, wCam), (0, screen_w))
         y3 = np.interp(y1, (0, hCam), (0, screen_h))
         
-        # Smoothen movement
+        # Smoothens movement
         clocX = plocX + (x3 - plocX) / smoothening
         clocY = plocY + (y3 - plocY) / smoothening
         
