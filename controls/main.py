@@ -81,7 +81,7 @@ while True:
     # clicking logic
     elif current_gesture == "thumbs_up":
         pyautogui.click()
-        time.sleep(0.3)  # Debounce click
+        time.sleep(0.3)  # Debounce click to prevent multiple clicks
 
     elif current_gesture == "swipe_right":        
         pyautogui.press('right')
