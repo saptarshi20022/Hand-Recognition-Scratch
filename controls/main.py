@@ -83,7 +83,7 @@ while True:
         time.sleep(0.3)  # Debounce click
 
     elif current_gesture == "swipe_right":
-        #pyautogui.hscroll(100)
+        
         # Fallback Method 2: Simulate key press
         pyautogui.press('right')
         time.sleep(0.3)
