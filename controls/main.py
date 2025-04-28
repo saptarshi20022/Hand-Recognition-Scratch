@@ -52,7 +52,7 @@ while True:
         # Gets first hand's bounding box
         x_min, y_min, x_max, y_max = bboxes[0]
         
-        # Crop and preprocess hand region
+        # Crops and preprocesses hand region
         hand_roi = img[y_min:y_max, x_min:x_max]
         if hand_roi.size > 0:
             resized = cv2.resize(hand_roi, (64, 64))
