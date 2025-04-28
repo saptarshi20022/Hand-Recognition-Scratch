@@ -49,7 +49,7 @@ while True:
 
     
     if bboxes and lmList:
-        # Get first hand's bounding box
+        # Gets first hand's bounding box
         x_min, y_min, x_max, y_max = bboxes[0]
         
         # Crop and preprocess hand region
