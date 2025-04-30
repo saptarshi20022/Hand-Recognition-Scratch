@@ -83,6 +83,7 @@ while True:
         pyautogui.click()
         time.sleep(0.3)  # Debounce click to prevent multiple clicks
 
+    # Swipe right logic
     elif current_gesture == "swipe_right":        
         pyautogui.press('right')
         time.sleep(0.3)
