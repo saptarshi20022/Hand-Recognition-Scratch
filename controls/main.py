@@ -5,6 +5,7 @@ import os
 import numpy as np
 import tensorflow as tf
 import pyautogui
+
 # Adding project root to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.hand_tracker import HandDetector
