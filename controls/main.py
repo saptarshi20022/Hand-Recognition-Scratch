@@ -78,7 +78,7 @@ while True:
         pyautogui.moveTo(clocX, clocY)
         plocX, plocY = clocX, clocY
 
-    # clicking logic
+    # Clicking logic
     elif current_gesture == "thumbs_up":
         pyautogui.click()
         time.sleep(0.3)  # Debounce click to prevent multiple clicks
