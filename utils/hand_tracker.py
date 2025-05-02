@@ -54,10 +54,8 @@ class HandDetector:
 
     # Method to find hand landmarks
     def find_position(self, img, hand_idx=0, draw=True, include_z=False):
-        """
-        Returns landmark positions for a specific hand
-        Updated to match MediaPipe's current landmark numbering
-        """
+        
+        # Returns landmark positions for a specific hand, updated to match MediaPipe's current landmark numbering  
         lm_list = []
         if self.results and self.results.multi_hand_landmarks:
             hand = self.results.multi_hand_landmarks[hand_idx]
