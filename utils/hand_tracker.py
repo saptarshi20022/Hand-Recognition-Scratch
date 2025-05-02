@@ -24,12 +24,9 @@ class HandDetector:
         self.mp_draw = mp.solutions.drawing_utils
         self.results = None
 
+    # Method to find hands in the image
     def find_hands(self, img, draw=True):
-        """
-        Returns:
-        - img: Image with drawn landmarks
-        - bboxes: List of bounding boxes [(x_min, y_min, x_max, y_max), ...]
-        """
+
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         self.results = self.hands.process(img_rgb)
         bboxes = []
