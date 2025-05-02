@@ -52,6 +52,7 @@ class HandDetector:
 
         return img, bboxes
 
+    # Method to find hand landmarks
     def find_position(self, img, hand_idx=0, draw=True, include_z=False):
         """
         Returns landmark positions for a specific hand
