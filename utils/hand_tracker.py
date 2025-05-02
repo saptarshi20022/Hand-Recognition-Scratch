@@ -6,9 +6,9 @@ class HandDetector:
     # Initialized MediaPipe Hands and Drawing utilities
     def __init__(self, static_image_mode=False, max_num_hands=1, 
                  min_detection_confidence=0.5, min_tracking_confidence=0.5):
-        """
-        Updated for MediaPipe 0.10.3+ with current parameter names
-        """
+        
+        # Updated for MediaPipe 0.10.3+ with current parameter names
+        
         self.static_image_mode = static_image_mode
         self.max_num_hands = max_num_hands
         self.min_detection_confidence = min_detection_confidence
